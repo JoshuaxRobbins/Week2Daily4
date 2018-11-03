@@ -1,86 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/lvCategory1"
-    android:onClick="onSeeInCategory"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:weightSum="2"
-        android:orientation="horizontal"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
-        <TextView
-            android:text="Name:"
-            android:layout_weight="1"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvAnimalName"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:weightSum="2"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ivPicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp" />
 
-        <TextView
-            android:text="Age:"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvAnimalAge"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/ivPicture"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:text="Name:" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvAnimalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tvName"
+                android:paddingBottom="10dp"
+                android:text="Animal Name" />
 
-    <LinearLayout
-        android:weightSum="2"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvName"
+                android:layout_toRightOf="@+id/ivPicture"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:text="Age:" />
 
-        <TextView
-            android:text="Weight:"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvAnimalWeight"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvAnimalAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvName"
+                android:layout_alignLeft="@+id/tvAnimalName"
+                android:layout_toRightOf="@+id/tvName"
+                android:paddingBottom="10dp"
+                android:text="AnimalAge" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAge"
+                android:layout_toRightOf="@+id/ivPicture"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:text="Weight:" />
 
-    <LinearLayout
-        android:weightSum="2"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvAnimalWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAge"
+                android:layout_alignLeft="@+id/tvAnimalName"
+                android:layout_toRightOf="@+id/tvName"
+                android:paddingBottom="10dp"
+                android:text="AnimalWeight" />
 
-        <TextView
-            android:text="Fact:"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tvAnimalFact"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvFacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWeight"
+                android:layout_toRightOf="@+id/ivPicture"
+                android:paddingLeft="20dp"
+                android:text="Fact:" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvAnimalFact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWeight"
+                android:layout_alignLeft="@+id/tvAnimalName"
+                android:layout_toRightOf="@+id/tvName"
+                android:text="AnimalFact" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

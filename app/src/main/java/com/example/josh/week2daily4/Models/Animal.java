@@ -1,17 +1,24 @@
-package com.example.josh.week2daily4.Animals;
+package com.example.josh.week2daily4.Models;
+
+import android.graphics.Bitmap;
 
 public class Animal {
 
+    String categoryId;
     String name;
     String age;
     String weight;
     String fact;
+    Bitmap picture;
 
-    public Animal(String name, String age, String weight, String fact) {
+
+    public Animal(String name, String age, String weight, String fact,Bitmap picture,String categoryId) {
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.fact = fact;
+        this.picture = picture;
+        this.categoryId = categoryId;
     }
 
     @Override
@@ -22,6 +29,22 @@ public class Animal {
                 ", weight='" + weight + '\'' +
                 ", fact='" + fact + '\'' +
                 '}';
+    }
+
+    public String getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public Bitmap getPicture() {
+        return picture;
+    }
+
+    public void setPicture(Bitmap picture) {
+        this.picture = picture;
     }
 
     public String getName() {

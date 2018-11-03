@@ -1,9 +1,15 @@
-package com.example.josh.week2daily4.Animals;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.example.josh.week2daily4.Models;
 
 public class Category {
+    String categoryId;
+    public String getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+    }
+
     private String categoryTitle;
 
     public Category(String categoryTitle) {

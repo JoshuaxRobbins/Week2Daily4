@@ -1,4 +1,4 @@
-package com.example.josh.week2daily4.Animals;
+package com.example.josh.week2daily4.Models;
 
 import java.util.ArrayList;
 import java.util.List;
